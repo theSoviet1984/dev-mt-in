@@ -3,8 +3,7 @@ angular.module('socialApp')
 $scope.profileObj={}
 $scope.createProfile = function(profileObj){
   console.log("running")
-  console.log($scope.profileObj)
- }
+  }
 $scope.test2="working"
 $scope.getProfile= function(){
   mainService.getProfile().then(function(response){
