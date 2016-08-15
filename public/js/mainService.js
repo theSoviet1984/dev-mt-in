@@ -2,12 +2,20 @@ angular.module('socialApp').service('mainService', function($http){
 
 var profiles = [];
  this.saveProfile = function(profileObj){
-   console.log(profileObj)
-   console.log(profiles)
    profiles.push(profileObj)
+   console.log('PROFILES:', profiles);
  }
  this.getProfile = function(){
-   profiles.pop()
+  if(profiles[0]){
+    return profiles[0]
+  } else {
+    return {
+      fullName: 'TEST',
+      tagline: 'test',
+      imgUrl: 'test.test',
+      shortBio: 'tester tester'
+    }
+  }
  }
 //after backend setup//
   // this.createProfile = function(){

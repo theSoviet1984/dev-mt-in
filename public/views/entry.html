@@ -8,9 +8,8 @@
       <input type="text" placeholder="Full Name" ng-model="profileObj.fullName">
       <input type="text" placeholder="Tagline" ng-model="profileObj.tagline">
       <input type="text" placeholder="Profile Image Url" ng-model="profileObj.imageUrl">
-      <textarea placeholder="Short Bio"ng-model="shortBio"></textarea>
-      <button><a ng-click="createProfile()">Save Changes</a></button>
-{{profileObj}}
+      <textarea placeholder="Short Bio" ng-model="profileObj.shortBio"></textarea>
+      <button ng-click="createProfile(profileObj)"><a>Save Changes</a></button>
     </section>
     <article class="image-article">
       <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity">
