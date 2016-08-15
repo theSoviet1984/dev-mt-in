@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <header class="page-header">
+    <h1>Dev Mountain</h1>
+  </header>
+  <main class="page-content">
+    <section class="input-section">
+      <h2>Welcome to Dev Mountain Social Add Some Info So Friends Can Find You</h2>
+      <input type="text" placeholder="Full Name" ng-model="profileObj.fullName">
+      <input type="text" placeholder="Tagline" ng-model="profileObj.tagline">
+      <input type="text" placeholder="Profile Image Url" ng-model="profileObj.imageUrl">
+      <textarea placeholder="Short Bio"ng-model="shortBio"></textarea>
+      <button><a ng-click="createProfile()">Save Changes</a></button>
+{{profileObj}}
+    </section>
+    <article class="image-article">
+      <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity">
+
+    </article>
+  </main>
+
+</div>

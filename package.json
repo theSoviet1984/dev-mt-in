@@ -1,0 +1,25 @@
+{
+  "name": "dev-mt-in",
+  "version": "1.0.0",
+  "description": "a social media app like facebook ",
+  "main": "index.js",
+  "scripts": {
+    "start": "server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theSoviet1984/dev-mt-in.git"
+  },
+  "author": "Jerad Amundsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theSoviet1984/dev-mt-in/issues"
+  },
+  "homepage": "https://github.com/theSoviet1984/dev-mt-in#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.8"
+  }
+}
