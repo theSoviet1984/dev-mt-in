@@ -7,17 +7,17 @@ angular.module('socialApp', ['ui.router'])
       .state('entry', {
         url: '/',
         templateUrl: "../views/entry.html",
-        controller: 'mainCtrl'
+        controller: 'entryCtrl'
       })
       .state('landingPage', {
         url: '/landingPage',
         templateUrl: "../views/landingPage.html",
         controller: 'landingCtrl',
-        // resolve:{
-        //   profile: function(mainService, $q){
-        //     return q.resolve(mainService.getProfile())
-        //   }
-        // }
+        resolve:{
+          profile: function(mainService, $q){
+            return $q.resolve(mainService.getProfile())
+          }
+        }
       })
       .state('updateProfile',{
         url:'/updateProfile',
