@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>landing page</title>
-  </head>
-  <body>
-    <div class="wrapper2">
-      <header class="page-header">
+
+<div class="container fluid">
+  <div class="row">
         <h1>DevMountain</h1>
-      </header>
-      <div>
-        <li>{{profileObj.fullName}}</li>
-        <li>{{profileObj.tagline}}</li>
-        <li>{{profileObj.imageUrl}}</li>
-        <li>{{profileObj.shortBio}}</li>
-    {{test}}
-      </div>
-      <div>
-
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>{{profileObj.fullName}}</h2>
+      <h4>{{profileObj.tagline}}</h4>
+      <p>{{profileObj.shortBio}}
+      </p>
     </div>
+    <div class="col-md-6">
+      <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity pic">
+    </div>
+  </div>
 
-
-
-
-  </body>
-</html>
+</div>

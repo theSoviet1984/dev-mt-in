@@ -8,61 +8,43 @@ html {
   padding: 0;
   font-family: Lora-Regular;
 }
-.wrapper{
-  height: calc(100vh-300px);
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  border-bottom: solid teal;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+.flexbox{
+  display: flex;
+
+}
+.left-column{
+  flex: 1 1
+}
+.right-column{
+  flex: 1 1
+}
+.form-flexbox{
   display: flex;
   flex-direction: column;
-  height: 100VH;
-  padding: 10px;
-  font-size: 80%;
-}
-.page-header {
-  padding: 20px;
-  text-align: center;
-}
-.page-header h1 {
-  font-size: 21px;
-  color: #272727;
-}
-.page-content {
-  display: flex;
-  flex-grow: 1;
-
   justify-content: center;
 
 }
-.input-section {
-flex: 1 1 45%;
-justify-content: center;
-display: flex;
-flex-direction: column;
-padding: 50px;
-}
-.image-article {
-  flex: 1 1 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.image-article img{
-
-}
-.input-section h1 {
-  padding: 20px;
+.form-flexbox h4{
+  margin: 10px 100px;
   text-align: center;
-  margin-bottom: 20px;
 }
-.input-section input, textarea, button{
-  padding: 10px;
-  margin: 20px;
+.form-flexbox input{
+  margin: 10px 100px;
+  text-align: center;
 }
-.footer{
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 20px;
+.form-flexbox textarea{
+  margin: 10px 100px;
+  text-align: center;
 }
-.footer a{
-  margin: 0 50px;
-  text-decoration: none;
+.form-flexbox button {
+  margin: 10px 150px;
+  text-align: center;
+
 }

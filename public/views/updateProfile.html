@@ -1,3 +1,32 @@
-<div>
-  <h1>Update Profile</h1>
+
+
+
+
+
+
+
+
+<div class="container-fluid" ng-controller='updateCtrl' >
+  <div class="row">
+    <h1 class="col-lg-12">Dev Mountain</h1>
+  </div>
+
+  <div class="row flexbox">
+    <div class="col-lg-6 left-column">
+      <form class="col-lg-2">
+        <div class="form-group form-flexbox">
+          <h4>Update Your Profile</h4>
+          <input type="text" value="{{profileObj.name}}" ng-model="profileObj.name">{{profileObj.name}}
+          <input type="text" value="{{profileObj.tagline}}" ng-model="profileObj.tagline">
+          <input type="text" value="{{profileObj.image}}" ng-model="profileObj.image">
+          <textarea value="{{profileObj.bio}}" ng-model="profileObj.shortBio"></textarea>
+          <button ng-click="updateProfile(profileObj)"><a>Save Changes</a></button>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity">
+    </div>
+  </div>
+
 </div>
