@@ -1,25 +1,19 @@
 
 <div class="container-fluid">
-  <div class="row">
     <h1 class="col-lg-12">Dev Mountain</h1>
-  </div>
-
-  <div class="row flexbox">
-    <div class="left-column">
-      <form>
-        <div class="form-flexbox">
+  <div class="col-lg-6">
+    <div class="row">
           <h4>Welcome to Dev Mountain Social Add Some Info So Friends Can Find You</h4>
-          <input type="text" placeholder="Full Name" ng-model="profileObj.fullName">
-          <input type="text" placeholder="Tagline" ng-model="profileObj.tagline">
-          <input type="text" placeholder="Profile Image Url" ng-model="profileObj.imageUrl">
-          <textarea placeholder="Short Bio" ng-model="profileObj.shortBio"></textarea>
-          <button ng-click="createProfile(profileObj)"><a>Save Changes</a></button>
-        </div>
-      </form>
+          <input type="text" placeholder="Full Name" ng-model="newProfile.fullName" class="form-control">
+          <input type="text" placeholder="Tagline" ng-model="newProfile.tagline" class="form-control">
+          <input type="text" placeholder="Profile Image Url" ng-model="newProfile.imageUrl" class="form-control">
+          <textarea placeholder="Short Bio" ng-model="newProfile.shortBio" class="form-control"></textarea>
+          <button ng-click="createProfile(newProfile)" ui-sref="landingPage" class="form-control">Create Profile</button>
+      </div>
     </div>
-    <div>
-      <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity">
+    <div class="col-lg-6">
+      <div class="row">
+        <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity">
+      </div>
     </div>
   </div>
-
-</div>

@@ -1,18 +1,16 @@
 
-<div class="container fluid">
-  <div class="row">
+<div class="container fluid" ng-controller="mainCtrl">
         <h1>DevMountain</h1>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <h2>{{profileObj.fullName}}</h2>
-      <h4>{{profileObj.tagline}}</h4>
-      <p>{{profileObj.shortBio}}
-      </p>
+    <div class="col-lg-6">
+      <div class="row" ng-repeat="profile in landingProfiles">
+        <h2>{{profile.fullName}}</h2>
+        <h4>{{profile.tagline}}</h4>
+        <p>{{profile.shortBio}}</p>
+      </div>
     </div>
     <div class="col-md-6">
-      <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity pic">
+        <div class="row">
+          <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity pic">
+        </div>
     </div>
-  </div>
-
 </div>

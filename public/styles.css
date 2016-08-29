@@ -48,3 +48,13 @@ h1 {
   text-align: center;
 
 }
+.friend-images{
+  display: inline-block;
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+  margin: 5px 5px;
+}
+.friends h2{
+  text-align: center;
+}

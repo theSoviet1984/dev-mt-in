@@ -1,0 +1,20 @@
+<div class="container-fluid" ng-controller="mainCtrl">
+  <h1 class="col-lg-12">Dev Mountain</h1>
+  <div>
+  <div class="col-lg-6">
+    <div class="row" ng-repeat="profile in profiles">
+      <div>{{profile.fullName}}</div>
+      <div>{{profile.tagline}}</div>
+      <div>{{profile.shortBio}}</div>
+    </div>
+
+  </div>
+  </div>
+  <div class="col-lg-6 friends">
+      <h2>Friends</h2>
+    <div class="row friend-images"ng-repeat="friend in friends">
+      <img ng-src="{{friend.imageUrl}}">
+
+    </div>
+  </div>
+</div>

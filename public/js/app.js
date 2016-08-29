@@ -7,22 +7,26 @@ angular.module('socialApp', ['ui.router'])
       .state('entry', {
         url: '/',
         templateUrl: "../views/entry.html",
-        controller: 'entryCtrl'
+        controller: 'mainCtrl'
       })
       .state('landingPage', {
         url: '/landingPage',
-        templateUrl: "../views/landingPage.html",
-        controller: 'landingCtrl',
-        resolve:{
-          profile: function(mainService, $q){
-            return $q.resolve(mainService.getProfile())
-          }
-        }
+        templateUrl: "../views/landingPage.html"
+        // controller: 'landingCtrl',
+        // resolve:{
+        //   profile: function(mainService, $q){
+        //     return $q.resolve(mainService.getProfile())
+        //   }
+        // }
       })
       .state('updateProfile',{
         url:'/updateProfile',
         templateUrl: "../views/updateProfile.html"
 
+      })
+      .state('friendProfileView',{
+        url:'/friendProfileView',
+        templateUrl: "../views/friendProfileView.html"
       })
       .state('findFriends',{
         url:'/findFriends',
