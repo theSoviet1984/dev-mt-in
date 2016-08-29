@@ -2,6 +2,9 @@ html {
   box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
 *, *:before, *:after{
   box-sizing: inherit;
   margin: 0;
@@ -57,4 +60,17 @@ h1 {
 }
 .friends h2{
   text-align: center;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 155px; /* .push must be the same height as .footer */
+}
+.entryInput{
+  margin: 10px;
+  padding: 20px;
 }
