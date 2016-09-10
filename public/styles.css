@@ -1,9 +1,10 @@
-html {
-  box-sizing: border-box;
-}
+h
 
-html, body {
-    height: 100%;
+
+html {
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
 }
 *, *:before, *:after{
   box-sizing: inherit;
@@ -11,46 +12,18 @@ html, body {
   padding: 0;
   font-family: Lora-Regular;
 }
-h1 {
-  text-align: center;
-  margin-bottom: 50px;
-  border-bottom: solid teal;
-  padding: 20px;
-  padding-bottom: 40px;
+body {
+  margin-bottom: 100px;
 }
+
 .flexbox{
   display: flex;
 
 }
-.left-column{
-  flex: 1 1
+.head {
+    border-bottom: solid teal;
 }
-.right-column{
-  flex: 1 1
-}
-.form-flexbox{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-}
-.form-flexbox h4{
-  margin: 10px 100px;
-  text-align: center;
-}
-.form-flexbox input{
-  margin: 10px 100px;
-  text-align: center;
-}
-.form-flexbox textarea{
-  margin: 10px 100px;
-  text-align: center;
-}
-.form-flexbox button {
-  margin: 10px 150px;
-  text-align: center;
-
-}
 .friend-images{
   display: inline-block;
   width: auto;
@@ -61,16 +34,58 @@ h1 {
 .friends h2{
   text-align: center;
 }
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
-}
-.footer, .push {
-    height: 155px; /* .push must be the same height as .footer */
-}
-.entryInput{
-  margin: 10px;
+.heading{
+  margin-bottom: 20px;
   padding: 20px;
+  border-bottom: solid 2px #1715ff;
+  width: 100%;
+}
+.second-heading p{
+  padding: 10px;
+
+  margin: 0 40px 10px 40px;
+
+}
+.container {
+  max-width: 960;
+}
+.entry-right{
+
+}
+.well {
+  background: transparent;
+}
+.sub-heading p{
+
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    color: #efefef;
+    padding-top: 50px;
+      bottom: 0;
+}
+.footer a {
+  color:  #efefef;
+}
+
+
+
+.needs-width li{
+  width: 150px;
+  margin: 0 50px 0 50px;
+}
+.needs-width li:first-child{
+  margin-left: 150px;
+}
+.hov{
+  background-color: red;
+  border-color: green;
+  color: blue;
+}
+@media only screen and (max-width: 768px){
+  body { margin-bottom: 100px}
+  .footer {height: 100px}
 }
