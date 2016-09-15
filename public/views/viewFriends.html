@@ -1,3 +1,9 @@
 <div>
   <h1>Friends View</h1>
+  <input type="text" placeholder="fullName" ng-model="search_name">
+  <ul ng-repeat="friend in friends">
+    <li>{{friend.fullName}}</li>
+    <li>{{friend.tagline}}</li>
+    <li>{{friend.shortBio}}</li>
+  </ul>
 </div>

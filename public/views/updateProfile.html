@@ -1,44 +1,51 @@
 
-<div class="container-fluid" ng-controller='mainCtrl'>
-    <h1 class="col-lg-12">Dev Mountain</h1>
+  <div class="row top-row">
+        <div class="col-md-5 col-md-offset-1 second-heading">
+          <p>Update Your Profile</p>
+        </div>
+  <div class="col-md-5 col-md-offset-1">
+        <form class="form-horizontal">
 
+          <div class="form-group">
 
+                <strong>Fullname:</strong>
+                <span ng-show="display">{{profileToEdit.fullName}}</span>
+                <input ng-hide="display" type="text" placeholder="Full Name" ng-model="newProfile.fullName" class="form-control">
 
-  <div class="col-lg-6">
-    <div class="row" ng-repeat="profile in editedProfiles">
-          <h4>Update Your Profile</h4>
-          <p>
-            <strong>Fullname:</strong>
-            <span ng-show="display">{{profile.fullName}}</span>
-            <input ng-hide="display" type="text" placeholder="Full Name" ng-model="newProfile.fullName" class="form-control">
-          </p>
-          <p>
-            <strong>Tagline: </strong>
-            <span ng-show="display">{{profile.tagline}}</span>
+        </div>
+        <div class="form-group">
+
+            <p><strong>Tagline: </strong>
+            <span ng-show="display">{{profileToEdit.tagline}}</span></p>
             <input ng-hide="display" type="text" placeholder="Tagline" ng-model="NewProfile.tagline" class="form-control">
-          </p>
-          <p>
-            <strong>Image Url:</strong>
-            <span ng-show="display">{{profile.imageUrl}}</span>
+
+        </div>
+        <div class="form-group">
+
+            <p><strong>Image Url:</strong>
+            <img ng-show="display" src="{{profileToEdit.imageUrl}}"></p>
             <input ng-hide="display" type="text" placeholder="Profile Image Url" ng-model="newProfile.imageUrl" class="form-control">
-          </p>
-          <p>
-            <strong>Short Bio:</strong>
-            <span ng-show="display">{{profile.shortBio}}</span>
+
+      </div>
+      <div class="form-group">
+
+            <p><strong>Short Bio:</strong>
+            <span ng-show="display">{{profileToEdit.shortBio}}</span></p>
             <textarea ng-hide="display" placeholder="Short Bio" ng-model="newProfile.shortBio" class="form-control"></textarea>
-          </p>
+
+      </div>
+      <div class="form-group">
+
+            <button ng-show="display" ng-click="edit()" class="form-control btn btn-sm btn-success">Edit</button>
+            <button ng-hide="display" ng-click="updateProfile(newProfile)" ui-sref="friendProfileView" class="form-control btn btn-sm btn-success">Save</button>
+
       </div>
 
-      <div class="row">
-            <button ng-show="display" ng-click="edit()" class="form-control">Edit</button>
-            <button ng-hide="display" ng-click="updateProfile(newProfile)" ui-sref="friendProfileView" class="form-control">Save</button>
-      </div>
+      </form>
+  </div>
 
 
-    </div>
-    <div class="col-lg-6">
-    <div class="row">
-      <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity">
-    </div>
-    </div>
+  <div class="col-md-5">
+    <img src="https://d13yacurqjgara.cloudfront.net/users/22928/screenshots/2882936/lecrae_gravity_falcons_helmetw_1x.jpg" alt="gravity">
+  </div>
 </div>

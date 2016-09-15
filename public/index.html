@@ -11,11 +11,16 @@
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Geostar" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="container-fluid">
-
+	<div class="row heading">
+    <div class="col-md-4 col-md-offset-4">
+        <h1>Dev Mountain Social Pages</h1>
+    </div>
+	</div>
 
 
 	<ui-view></ui-view>
@@ -42,13 +47,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script>
 <script src="./js/app.js"></script>
-<script src="./js/mainCtrl.js"></script>
+<script src="./js/controllers/mainCtrl.js"></script>
 <script src="./js/mainService.js"></script>
-
-<!-- <script src="./js/landingCtrl.js"></script> -->
-<!-- <script src="./dirs/modal.js"></script> -->
-<!-- <script src="./js/updateCtrl.js"></script> -->
-<!-- <script src="./dirs/nav.js"></script> -->
-
+<script src="./js/controllers/findFriendsCtrl.js"></script>
+<script src="./js/controllers/friendProfileViewCtrl.js"></script>
+<script src="./js/controllers/updateProfileViewCtrl.js"></script>
+<script src="./js/controllers/viewFriendsCtrl.js"></script>
 </body>
 </html>
