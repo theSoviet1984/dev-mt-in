@@ -1,20 +1,46 @@
-<div>
-
 <div class="row">
-    <div class="col-lg-6">
-        <ul ng-repeat="profile in profiles">
-        <li>fullname: {{profile.fullName}}</li>
-        <li>tagline: {{profile.tagline}}</li>
-        <li>bio: {{profile.shortBio}}</li>
-      </ul>
-    </div>
+ <div class="navbar">
+   <button ui-sref="viewFriends">Back to Friends</button>
+ </div>
+  <div class="row">
+  <div class="form-group col-md-2 col-md-offset-1">
+    <h1 class="text-center">Friends View</h1>
+    <input type="text" placeholder="fullName" ng-model="search_name" class="form-control">
+  </div>
+  </div>
+  <div ng-repeat="friend in friends | filter:search_name" class="media">
+   <div class="col-md-6">
+    <a href="" class="media-left">
+      <img ng-model="newFriend.imageUrl" src="{{friend.imageUrl}}" alt="">
+    </a>
+  <div class="media-body">
+    <div class="col-md-8">
+      <h3 class="lead media-heading" ng-model="newFriend.fullName">{{friend.fullName}}</h3>
+      <div ng-model="newFriend.tagline">{{friend.tagline}}</div>
+      <div ng-model="newFriend.shortBio">{{friend.shortBio}}</div>
+      <div>
 
+        <button ng-hide="currentFriend" ng-click="removeFriend(newFriend)">Remove  Friend</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div ng-repeat="person in people | filter:search_name" class="media">
+ <div class="col-md-6">
+  <a href="" class="media-left">
+    <img ng-model="newFriend.imageUrl" src="{{person.imageUrl}}" alt="">
+  </a>
+<div class="media-body">
+  <div class="col-md-8">
+    <h3 class="lead media-heading" ng-model="newFriend.fullName">{{person.fullName}}</h3>
+    <div ng-model="newFriend.tagline">{{person.tagline}}</div>
+    <div ng-model="newFriend.shortBio">{{person.shortBio}}</div>
+    <div>
 
-    <div class="col-lg-6">
-      <h2>Friends</h2>
-    <div ng-repeat="friend in friends">
-      <img ng-src="{{friend.imageUrl}}">
+      <button ng-hide="currentFriend" ng-click="addFriend(newFriend)">Add Friend</button>
     </div>
-    </div>
+  </div>
+</div>
 </div>
 </div>

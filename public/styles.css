@@ -34,8 +34,11 @@ body {
   overflow: hidden;
   margin: 5px 5px;
 }
-.friends h2{
-  text-align: center;
+.lead {
+  color: #555;
+}
+.media-text{
+  font-family: sans-serif;
 }
 .heading{
   margin-bottom: 20px;

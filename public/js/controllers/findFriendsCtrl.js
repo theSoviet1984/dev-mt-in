@@ -1,5 +1,5 @@
 angular.module('socialApp')
-.controller('findFriendsCtrl', function($scope, $state, mainService){
+.controller('findFriendsCtrl', function($scope, $state, friendService, peopleService){
 
 $scope.test="im working"
 

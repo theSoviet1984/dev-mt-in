@@ -1,42 +1,18 @@
-angular.module('socialApp').service('mainService', function($http){
+angular.module('socialApp').service('friendService', function($http){
+
+this.saveFriend=function(newFriend){
+  friends.push(newFriend)
+}
 
 
- var profiles = [{
-   fullName: "Mark Zuckerberg",
-   tagline: "I make money when I sleep",
-   imageUrl: "../images/zuckerbeg-main.jpg",
-   shortBio: "I make it rain"
- }
- ];
- this.saveProfile = function(newProfilePlusAvatar){
-   console.log(newProfilePlusAvatar)
-   if(newProfilePlusAvatar){
-   profiles.push(newProfilePlusAvatar)
- }
-   console.log('PROFILES:', profiles);
- }
- this.getProfiles = function(){
-  return profiles[profiles.length-1]
-
- }
-
- this.updateProfile = function(profile){
-  profilesPermenant.push(profile)
- }
- this.getProfilesPermenant= function(){
-   return profilesPermenant;
- }
 
 this.getFriends= function(){
   console.log(friends)
   return friends;
 
 }
-this.getAvatars = function(){
-  return avatars;
-}
 
-var profilesPermenant= [];
+
 var friends = [
    {
      fullName:"Warren Buffet",
@@ -56,24 +32,6 @@ var friends = [
 }
  ]
 
- var avatars = [
-   {
-     name: "Elaine",
-     img: "../images/elaine_avatar.jpg"
-   },
-   {
-     name: "George",
-     img: "../images/george_avatar.jpeg"
-   },
-   {
-     name: "Newman",
-     img: "../images/newman_avatar.jpeg"
-   },
-   {
-     name: "Jerry",
-     img: "../images/jerry_avatar.jpeg"
-   }
- ]
 //after backend setup//
   // this.createProfile = function(){
   //   return $http({

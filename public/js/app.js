@@ -36,5 +36,5 @@ angular.module('socialApp', ['ui.router'])
         templateUrl: "../views/viewFriends.html",
         controller: 'viewFriendsCtrl'
       })
-
+    
 });
