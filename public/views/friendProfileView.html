@@ -26,21 +26,3 @@
   </div>
   </div>
 </div>
-<div ng-repeat="person in people | filter:search_name" class="media">
- <div class="col-md-6">
-  <a href="" class="media-left">
-    <img ng-model="newFriend.imageUrl" src="{{person.imageUrl}}" alt="">
-  </a>
-<div class="media-body">
-  <div class="col-md-8">
-    <h3 class="lead media-heading" ng-model="newFriend.fullName">{{person.fullName}}</h3>
-    <div ng-model="newFriend.tagline">{{person.tagline}}</div>
-    <div ng-model="newFriend.shortBio">{{person.shortBio}}</div>
-    <div>
-
-      <button ng-hide="currentFriend" ng-click="addFriend(newFriend)">Add Friend</button>
-    </div>
-  </div>
-</div>
-</div>
-</div>

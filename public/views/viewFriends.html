@@ -1,3 +1,40 @@
 
+<div class="well text-center">
+  <div>
+    <h2>{{profilePermenant.fullName}}</h2>
+    <h4>{{profilePermenant.tagline}}</h4>
+    <p>{{profilePermenant.shortBio}}</p>
   </div>
+  <div class="positionAvatar">
+    <img  class="avatar" ng-src="{{profilePermenant.avatarImage}}" alt="">
+  </div>
+</div>
+<div class="form-group">
+  <button class="btn btn-sm btn-success" ui-sref="findFriends">Find Friends</button>
+</div>
+<div class="form-group">
+  <label for="avatar">Filter Friends By Seinfeld Character</label>
+  <input class="form-control" type="text" id="avatar" ng-model="avatarSearch" placeholder="Type Seinfeld Character">
+</div>
+<div ng-repeat="friend in friends | filter:avatarSearch" class="media">
+
+ <div class="col-md-6">
+  <a href="" class="media-left">
+    <img ng-model="newFriend.imageUrl" src="{{friend.imageUrl}}" alt="">
+  </a>
+<div class="media-body">
+  <div class="col-md-8">
+    <h3 class="lead media-heading" ng-model="newFriend.fullName">{{friend.fullName}}</h3>
+    <div ng-model="newFriend.tagline">{{friend.tagline}}</div>
+    <div ng-model="newFriend.shortBio">{{friend.shortBio}}</div>
+    <div>
+
+      <button class="btn btn-sm btn-success" ng-hide="currentFriend" ng-click="removeFriend(newFriend)">Remove  Friend</button>
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+  <img class="avatar" ng-model="newFriend.avatarImage" ng-src="{{friend.avatarImage}}">
+</div>
+</div>
 </div>

@@ -20,6 +20,11 @@
             <span ng-show="display">{{profileToEdit.shortBio}}</span></p>
             <textarea ng-hide="display" placeholder="Short Bio" ng-model="newProfile.shortBio" class="form-control"></textarea>
       </div>
+      <div class="form-group">
+            <p><strong>Avatar:</strong>
+            <span ng-show="display">{{profileToEdit.avatarImage}}</span></p>
+            <select ng-hide="display" name="" id="" ng-model="newProfile.avatarImage" ng-options="avatar.img as avatar.name for avatar in avatars"></select>
+      </div>
       <div class="row">
       <div class="form-group col-md-4 col-md-offset-1">
 

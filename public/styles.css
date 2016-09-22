@@ -12,14 +12,27 @@ html {
   padding: 0;
   font-family: Lora-Regular;
 }
+
 body {
   margin-bottom: 100px;
   font-family: 'Geostar', cursive;
 }
-
+.positionAvatar {
+  margin-top: top:5px;
+  margin-right: 5px;
+}
+.profileImage{
+  max-height: 230px;
+  max-width: 200px;
+  height: auto;
+  width: auto;
+}
 .flexbox{
   display: flex;
 
+}
+.avatar {
+  border-radius: 55px;
 }
 .head {
     border-bottom: solid teal;
@@ -77,15 +90,15 @@ line-height: 1.5
   color:  #efefef;
 }
 .footer a:hover {
-  color: #bbc4cc;
+  color: #83898e;
 }
 .footer a:active {
   color: #83898e;
 }
 
 .needs-width li{
-  width: 150px;
-  margin: 0 50px 0 50px;
+  width: 160px;
+  margin: 0 20px 0 20px;
 }
 .needs-width li:first-child{
   margin-left: 150px;

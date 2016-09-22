@@ -5,13 +5,14 @@ angular.module('socialApp').service('mainService', function($http){
    fullName: "Mark Zuckerberg",
    tagline: "I make money when I sleep",
    imageUrl: "../images/zuckerbeg-main.jpg",
-   shortBio: "I make it rain"
+   shortBio: "I make it rain",
+   avatarImage: "../images/newman_avatar.jpeg"
  }
  ];
- this.saveProfile = function(newProfilePlusAvatar){
-   console.log(newProfilePlusAvatar)
-   if(newProfilePlusAvatar){
-   profiles.push(newProfilePlusAvatar)
+ this.saveProfile = function(newProfile){
+   console.log(newProfile)
+   if(newProfile){
+   profiles.push(newProfile)
  }
    console.log('PROFILES:', profiles);
  }
@@ -20,9 +21,7 @@ angular.module('socialApp').service('mainService', function($http){
 
  }
 
- this.updateProfile = function(profile){
-  profilesPermenant.push(profile)
- }
+
  this.getProfilesPermenant= function(){
    return profilesPermenant;
  }
