@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>socialApp</title>
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-
+<script type="text/javascript">
+	$document.ready(function(e){
+		var wh =$(window).height();
+		var calculate = wh-90;
+		$("section").css("min-height", calculate);
+	});
+</script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 
@@ -15,7 +21,7 @@
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid wrapper">
 	<div class="row heading">
     <div class="col-md-4 col-md-offset-4">
         <h1>Seinfeld Social Pages</h1>
@@ -26,7 +32,7 @@
 	<ui-view></ui-view>
 
 
-
+<div class="push"></div>
 </div>
 
 <div class="navbar navbar-static-bottom footer">
