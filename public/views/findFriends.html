@@ -1,32 +1,29 @@
-<div>
-  <h1 class="text-center">Find Friends</h1>
-  <div class="badge badge-inverse">
-    what is a badge
-  </div>
-</div>
-<div class="form-control">
-  <label class="lead" for="avatar">Filter People By Favorite Seinfeld Character</label>
-  <input type="text" id="avatar" placeholder="Type Seinfeld Character">
-</div>
-<div ng-repeat="person in people | filter:search_name" class="row well">
 
-  <div class="col-md-3">
-  <div class="form-group">
-    <img class="col-md-4 col-md-offset-4 profileImage" ng-model="newFriend.imageUrl" src="{{person.imageUrl}}" alt="">
-    <button  class="btn btn-sm btn-success col-md-4 col-md-offset-4" ng-hide="currentFriend" ng-click="addFriend(newFriend)">Add Friend</button>
-    </div>
+<!-- <div class="row">
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="text-center">Filter People By Favorite Seinfeld Character</h3>
+  <input class="form-control" type="text" placeholder="Type Seinfeld Character" ng-model="">
+</div>
+</div> -->
+<div ng-repeat="profile in profiles" | filter:search_name" class="row well">
+  <div class="form-group col-md-3">
+    <div class="col-md-4 col-md-offset-4">
+      <img class="form-control profileImage" ng-model="newFriend.imageUrl" src="{{profile.imageUrl}}" alt="">
+
+      <button  class="btn btn-sm btn-success form-control" ng-click="addFriend(profile)">Add Friend</button>
+
   </div>
+</div>
   <div class="col-md-8 well">
-    <h3 class="lead media-heading" ng-model="newFriend.fullName">{{person.fullName}}</h3>
-    <div ng-model="newFriend.tagline">{{person.tagline}}</div>
-    <div ng-model="newFriend.shortBio">{{person.shortBio}}</div>
+    <h3 class="lead" ng-model="newFriend.fullName">{{profile.fullName}}</h3>
+    <div ng-model="newFriend.tagline">{{profile.tagline}}</div>
+    <div ng-model="newFriend.shortBio">{{profile.shortBio}}</div>
 
     <div>
-      <img ng-model="newFriend.avatarImage" class="img-thumbnail avatar" ng-src="{{person.avatarImage}}" alt="">
+      <img ng-model="newFriend.avatarImage" class="img-thumbnail avatar" ng-src="{{profile.avatarImage}}" alt="">
+  
     </div>
+
   </div>
 
-</div>
-
-</div>
 </div>

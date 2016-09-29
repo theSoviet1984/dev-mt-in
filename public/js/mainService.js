@@ -1,41 +1,48 @@
 angular.module('socialApp').service('mainService', function($http){
 
 
- var profiles = [{
-   fullName: "Mark Zuckerberg",
-   tagline: "I make money when I sleep",
-   imageUrl: "../images/zuckerbeg-main.jpg",
-   shortBio: "I make it rain",
-   avatarImage: "../images/newman_avatar.jpeg"
- }
- ];
+
+ //put profile in db//
  this.saveProfile = function(newProfile){
-   console.log(newProfile)
-   if(newProfile){
-   profiles.push(newProfile)
+   return $http({
+     method: 'POST',
+     data: newProfile,
+     url: "/api/profiles"
+   })
  }
-   console.log('PROFILES:', profiles);
- }
- this.getProfiles = function(){
-  return profiles[profiles.length-1]
+//retreive profile from database//
+this.getProfile = function(_id){
+  return $http({
+    method: 'GET',
+    url: "/api/profiles/recent"
+  })
+}
 
- }
-
-
- this.getProfilesPermenant= function(){
-   return profilesPermenant;
- }
+this.updateProfile = function(newProfile){
+  return $http({
+    method: 'PUT',
+    url: "/api/profiles"+ newProfile
+  })
+}
 
 this.getFriends= function(){
-  console.log(friends)
-  return friends;
+  return $http({
+    method: 'GET',
+    url: "/api/friends"
+  })
 
+}
+this.deleteFriends=function(){
+  return $http({
+    method: 'DELETE',
+    url: "/api/friends"
+  })
 }
 this.getAvatars = function(){
   return avatars;
 }
 
-var profilesPermenant= [];
+
 var friends = [
    {
      fullName:"Warren Buffet",

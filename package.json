@@ -2,10 +2,9 @@
   "name": "dev-mt-in",
   "version": "1.0.0",
   "description": "a social media app like facebook ",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " nodemon ./server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,9 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "mongoose": "^4.5.8"
+    "express-session": "^1.14.1",
+    "mongoose": "^4.5.8",
+    "passport": "^0.3.2",
+    "passport-twitter": "^1.0.4"
   }
 }

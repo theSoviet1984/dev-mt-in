@@ -4,9 +4,15 @@ angular.module('socialApp')
 $scope.test="im working"
 
 
+var getData = function(){
+mainService.getProfile()
+  .then(function(response){
+  var profiles= response.data
+  $scope.landingProfile =profiles[profiles.length-1]
+  })
+}
+getData()
 
-$scope.landingProfile= mainService.getProfiles()
-console.log($scope.landingProfile)
 
 
 $scope.createProfile = function(newProfile){

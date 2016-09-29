@@ -65,8 +65,9 @@ html, body {
 .heading{
   margin-bottom: 20px;
   padding: 20px;
-  border-bottom: solid 2px #1715ff;
+  border-bottom: solid 2px #4867AA;
   width: 100%;
+
 }
 .second-heading p{
   padding: 10px;
@@ -86,6 +87,10 @@ line-height: 1.5
 .sub-heading p{
 
 }
+/*.seinfeldSearch{
+  background-color: #4867AA;
+  color: #ffffff;
+}*/
 .footer{
     /*position: absolute;*/
     width: 100%;

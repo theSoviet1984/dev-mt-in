@@ -1,12 +1,29 @@
 angular.module('socialApp')
 .controller('mainCtrl', function($scope, $state, mainService){
 
-$scope.profilesPermenant=mainService.getProfilesPermenant();
+  $scope.createStarterProfile = function(newProfile){
 
+      mainService.saveProfile(newProfile)
+      $state.go("addInfo")
 
+   }
+var getStarterProfile = function(){
+  mainService.getProfile().then(function(response){
+      console.log(response.data)
+    var profiles= response.data
+    $scope.starterProfile =response.data
+    })
+  }
+getStarterProfile()
 
-$scope.landingProfile= mainService.getProfiles()
-console.log($scope.landingProfile)
+// var getProfile = function(){
+//   mainService.getProfile()
+//
+// }
+$scope.updateProfile = function(newProfile){
+  mainService.updateProfile()
+}
+
 
 $scope.avatars = mainService.getAvatars()
 $scope.avatarNames = $scope.avatars.map(function(avatar){
@@ -14,18 +31,6 @@ $scope.avatarNames = $scope.avatars.map(function(avatar){
 })
 
 // $scope.avatarSelected= avatarSelected;
-$scope.createProfile = function(newProfile){
-  console.log(newProfile)
-
-    // for(var i =0; i<$scope.avatars.length; i++){
-    //   if ($scope.avatarToUse === $scope.avatars[i].name){
-    //   newProfile.avatarImg = avatars[i].img
-    //   }
-    // }
-    mainService.saveProfile(newProfile)
-    $state.go("landingPage")
-
- }
 
 
 

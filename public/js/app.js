@@ -4,16 +4,21 @@ angular.module('socialApp', ['ui.router'])
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('entry', {
-        url: '/',
-        templateUrl: "../views/entry.html",
+      .state('home', {
+        url:'/',
+        templateUrl: "../views/home.html",
+        controller: 'mainCtrl'
+      })
+      .state('addInfo', {
+        url: '/addInfo',
+        templateUrl: "../views/addInfo.html",
         controller: 'mainCtrl'
 
       })
       .state('landingPage', {
         url: '/landingPage',
         templateUrl: "../views/landingPage.html",
-        controller: 'mainCtrl'
+        controller: 'landingCtrl'
       })
       .state('updateProfile',{
         url:'/updateProfile',
@@ -36,5 +41,5 @@ angular.module('socialApp', ['ui.router'])
         templateUrl: "../views/viewFriends.html",
         controller: 'viewFriendsCtrl'
       })
-    
+
 });

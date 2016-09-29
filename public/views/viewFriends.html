@@ -1,12 +1,12 @@
 
 <div class="well text-center">
   <div>
-    <h2>{{profilePermenant.fullName}}</h2>
-    <h4>{{profilePermenant.tagline}}</h4>
-    <p>{{profilePermenant.shortBio}}</p>
+    <h2>{{profile.fullName}}</h2>
+    <h4>{{profile.tagline}}</h4>
+    <p>{{profile.shortBio}}</p>
   </div>
   <div class="positionAvatar">
-    <img  class="avatar" ng-src="{{profilePermenant.avatarImage}}" alt="">
+    <img  class="avatar" ng-src="{{profile.avatarImage}}" alt="">
   </div>
 </div>
 <div class="form-group">
@@ -15,21 +15,28 @@
 <div class="row">
 <div class="form-group col-md-4 col-md-offset-4">
   <label  class="lead text-center" for="avatar">Filter Friends By Seinfeld Character</label>
-  <input class="form-control" type="text" id="avatar" ng-model="avatarSearch" placeholder="Type Seinfeld Character">
+  <input class="form-control" type="text" placeholder="Type Seinfeld Character">
 </div>
 </div>
-<div ng-repeat="friend in friends | filter:avatarSearch" class="row well">
+<div class="row well">
 
   <div class="col-md-3">
-
-      <img class="col-md-4 col-md-offset-4 profileImage" ng-model="newFriend.imageUrl" src="{{friend.imageUrl}}" alt="">
+      <div ng-repeat="friend in profile.friends track by $index" class="">
+        {{friend.fullName}}
+        <img ng-src="{{friend.avatarImage}}" />
+        <img ng-src="{{friend.imageUrl}}" />
+      </div>
   </div>
+</div>
+      <!-- <img class="col-md-4 col-md-offset-4 profileImage" src="{{friend.imageUrl}}" alt="">
+      <button ng-click="removeFriend(newFriend)"></button>
+
   <div class="col-md-8 well">
-    <h3 class="lead media-heading" ng-model="newFriend.fullName">{{friend.fullName}}</h3>
-    <div ng-model="newFriend.tagline">{{friend.tagline}}</div>
-    <div ng-model="newFriend.shortBio">{{friend.shortBio}}</div>
+    <h3 class="lead media-heading">{{friend.fullName}}</h3>
+    <div>{{friend.tagline}}</div>
+    <div>{{friend.shortBio}}</div>
     <div>
-      <img class="avatar" ng-model="newFriend.avatarImage" ng-src="{{friend.avatarImage}}">
+      <img class="avatar" ng-src="{{friend.avatarImage}}">
     </div>
   </div>
 </div>
@@ -37,4 +44,4 @@
 
 </div>
 </div>
-</div>
+</div> -->

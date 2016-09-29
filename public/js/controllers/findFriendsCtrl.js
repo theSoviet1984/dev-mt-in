@@ -1,10 +1,17 @@
 angular.module('socialApp')
 .controller('findFriendsCtrl', function($scope, $state, friendService, peopleService){
-$scope.friends=
-$scope.test="im working"
-$scope.people= peopleService.getPeople()
-$scope.addFriend= function(newFriend){
-  friendService.saveFriend(newFriend);
+
+
+var getProfiles = function(){
+  friendService.getProfiles().then(function(result){
+    console.log(result.data)
+    $scope.profiles=result.data;
+  })
+}
+getProfiles()
+
+$scope.addFriend= function(profile){
+  friendService.saveFriend(profile);
   $state.go("viewFriends");
 }
 // $scope.friends= mainService.getFriends();

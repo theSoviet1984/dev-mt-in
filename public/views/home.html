@@ -1,0 +1,65 @@
+<div class="navbar navbar-default">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" ui-sref="entry">SF</a>
+    <div class="navbar navbar-header">
+      <h1 class="navbar-text">Seinfeld Friends</h1>
+    </div>
+    <div class="navbar navbar-right">
+      <input class="navbar-text" type="text" placeholder="username" ng-model="profile.username">
+      <input class="navbar-text" type="text" placeholder="password" ng-model="profile.password">
+      <button class="navbar-text" ng-click="getProfile(profile)">Log In</button>
+      <a class="navbar-text" ui-sref="entry">Sign Up</a>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      <div>
+      <h2>Tired of the old way of connecting with people.  Try Seinfeld Friends. An innovative way to connect with like minded people.</h2>
+      </div>
+    <div>
+
+      <h3>Seinfeld Friends Features</h3>
+      <ul class="list-unstyled">
+        <li>Search for friends that save same favorite Seinfeld character</li>
+        <li>Search for friends who like the same Seinfeld episodes</li>
+        <li>Talk about seinfeld to break the ice when you connect with someone</li>
+      </ul>
+    </div>
+      <!-- <h2 class="lead">Current Top 3 Most Voted Episodes</h2>
+      <div>
+        <i title="Up Votes" ng-click="changeVote(vote, 'up')" class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'up', false:''}[vote=='up']"></i>
+        <br>
+        <i title="Down Votes" ng-click="changeVote(vote, 'down')" class="fa fa-arrow-circle-down fa-2x"  ng-class="{true:'down', false:''}[vote=='down']"></i>
+        <br>Vote: {{vote}}
+      </div>
+      <div></div>
+      <div></div> -->
+
+    </div>
+    <div class="col-md-5">
+      <h1 class="col-md-4 col-md-offset-4 text-center">Sign Up</h1>
+      <p class="col-md-4 col-md-offset-4 text-center lead">Its New And Adventurous</p>
+      <div>
+        <form>
+          <div class="row">
+            <div class="form-group col-md-4 col-md-offset-4">
+              <input class="form-control" type="text" placeholder="Fullname" ng-model="newProfile.fullName">
+            </div>
+            <div class="form-group col-md-4 col-md-offset-4">
+              <input class="form-control" type="text" placeholder="Username" ng-model="newProfile.username">
+            </div>
+            <div class="form-group col-md-4 col-md-offset-4">
+              <input class="form-control" type="text"placeholder="New Password"ng-model="newProfile.password">
+            </div>
+            <div class="form-group col-md-4 col-md-offset-4">
+              <button class="btn btn-sm btn-success form-control" ng-click="createStarterProfile(newProfile)">Sign Up</button>
+            </div>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>

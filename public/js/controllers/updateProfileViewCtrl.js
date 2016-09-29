@@ -3,7 +3,7 @@ angular.module('socialApp')
 
 $scope.test="im working"
 
-$scope.profileToEdit = mainService.getProfiles();
+$scope.profileToEdit = mainService.getProfile();
 
 
 $scope.display = true;
@@ -17,7 +17,7 @@ $scope.avatarNames = $scope.avatars.map(function(avatar){
 })
 
 $scope.updateProfile = function(newProfile){
-  mainService.saveProfile(newProfile);
+  mainService.updateProfile(newProfile);
   $state.go("viewFriends")
 }
 

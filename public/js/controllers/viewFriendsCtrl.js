@@ -1,12 +1,29 @@
 angular.module('socialApp')
 .controller('viewFriendsCtrl', function($scope, $state, friendService, mainService, peopleService){
 
-$scope.friends= friendService.getFriends();
-console.log('ctrl', $scope.friends)
+var getData = function(){
+  mainService.getProfile().then(function(response){
+    console.log(response.data)
+    $scope.profile=response.data;
+  })
+}
+getData();
+
+// var getFriends = function(){
+//   friendService.getFriends().then(function(response){
+//     $scope.friends = response.data
+//     console.log(response.data)
+//     console.log($scope.friends)
+//   })
+// }
+// getFriends();
 
 
+$scope.removeFriend = function(newFriend){
 
-$scope.profilePermenant = mainService.getProfiles()
+}
+
+
 // $scope.removeFriend(newFriend){
 //   // for(var i =0; i<$scope.friends.length; i++){
 //   //   if($scope.friends[i].fullName === newFriend){
